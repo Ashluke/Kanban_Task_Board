@@ -43,7 +43,6 @@ project/
 │  │  └── style.css
 │  │ 
 │  ├── package.json
-│  ├── package.json
 │  └── tsconfig.json
 │
 ├── .gitignore
@@ -87,46 +86,42 @@ User Action (drag/drop task)
 
 ---
 
-## How to Run
+## How To Run Project
 
-### 1. Setup Virtual Environment
+### 1. Backend Setup
 
-Create Virtual Environment
-```bash
-python -m venv venv
-```
-
-Activate Virtual Environment
-- Windows
+- Install Virtual Environment
+  ```bash
+  python -m venv venv
+  ```
+- Activate Virtual Environment
+  Windows
   ```bash
   venv\Scripts\activate
   ```
-- Mac/Linux
+  Mac/Linux
   ```bash
-  source venv/bin/activate
+  source venv\bin\activate
+  ```
+- Install Dependencies
+  ```bash
+  pip install -r requirements.txt
+  ```
+- Run Backend
+  ```bash
+  uvicorn main:app --reload
   ```
 
-### 2. Install Dependancies
-```bash
-pip install -r requirements.txt
-```
+### 2. Frontend Setup
 
-### 3. Compile TypeScript
-
-```bash
-tsc --watch 
-```
-
-### 4. Start Backend
-
-```bash
-python backend/main.py
-```
-
-backend runs locally at:
-http://127.0.0.1:8000 (or http://localhost:8000)
-
----
+- Install Dependencies
+  ```bash
+  npm install
+  ```
+- Compile TypeScript
+  ```bash
+  npm run build
+  ```
 
 ## Limitations
 
