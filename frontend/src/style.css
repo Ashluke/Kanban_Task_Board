@@ -1,0 +1,113 @@
+/* ---------------- LAYOUT ---------------- */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+/* Each column */
+.to-do,
+.in-progress,
+.done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Divider between columns */
+.in-progress {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid black;
+}
+
+/* Column header colors */
+.to-do .header-container {
+    background-color: lightblue;
+}
+
+.in-progress .header-container {
+    background-color: lightyellow;
+}
+
+.done .header-container {
+    background-color: lightgreen;
+}
+
+/* ---------------- TASK BOX ---------------- */
+
+.box {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+    border: 0.3px solid black;
+
+    text-align: center;
+    position: relative;
+}
+
+/* ---------------- TRASH ---------------- */
+
+.trash-bin {
+    min-height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.trash-hint {
+    font-size: 14px;
+    opacity: 0.4;
+    color: #000;
+
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+/* ---------------- DRAG STATES ---------------- */
+
+.to-do.drag-over,
+.in-progress.drag-over,
+.done.drag-over,
+.trash-bin.drag-over {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container button {
+    width: 100%;
+    margin-bottom: 50px;
+}
