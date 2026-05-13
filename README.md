@@ -89,13 +89,35 @@ User Action (drag/drop task)
 
 ## How to Run
 
-### 1. Compile TypeScript
+### 1. Setup Virtual Environment
+
+Create Virtual Environment
+```bash
+python -m venv venv
+```
+
+Activate Virtual Environment
+- Windows
+  ```bash
+  venv\Scripts\activate
+  ```
+- Mac/Linux
+  ```bash
+  source venv/bin/activate
+  ```
+
+### 2. Install Dependancies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Compile TypeScript
 
 ```bash
 tsc --watch 
 ```
 
-### 2. Start Backend (FastAPI)
+### 4. Start Backend
 
 ```bash
 python backend/main.py
