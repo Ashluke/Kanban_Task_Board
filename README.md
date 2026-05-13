@@ -21,6 +21,7 @@ Built using:
 
 ## Project Structure
 
+```
 project/
 │
 ├── backend/
@@ -47,6 +48,7 @@ project/
 │
 ├── .gitignore
 └── README.md
+```
 
 ---
 
